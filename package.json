@@ -90,8 +90,6 @@
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "node_modules",
-      ".entity.ts",
-      ".dto.ts",
       "constants.ts"
     ]
   }
