@@ -213,6 +213,7 @@ describe('UserModule (e2e)', () => {
         });
     });
   });
+
   describe('me', () => {
     it('should find my profile', () => {
       return privateTest(`
