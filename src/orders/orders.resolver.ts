@@ -97,7 +97,7 @@ export class OrderResolver {
     },
   })
   @Role(['Any'])
-  orderUpdates(@Args('input') orderUpdatesInput: OrderUpdatesInput) {
+  orderUpdates() {
     return this.pubsub.asyncIterator(NEW_ORDER_UPDATE);
   }
 
