@@ -11,7 +11,7 @@ The Backend of Uber Eats Clone
 
 ### Users
 
-- User Authentication
+- User Authentication(JWT Authentication)
 - Email Verification
 - Photo Upload
 - Client / Owner / Driver Profile
