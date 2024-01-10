@@ -2,52 +2,31 @@
 
 The Backend of Uber Eats Clone
 
-## User Entity:
+## Skills
 
-- id
-- createdAt
-- updatedAt
-- email
-- password
-- role(client|owner|delivery)
+- NestJS, Typescript, TypeORM, GraphQL
+- test: Jest
 
-## User CRUD:
+## Functions
 
-- Create Account
-- Log In
-- See Profile
-- Edit Profile
-- Verify Email
+### Users
 
-## Restaurant Entity:
+- User Authentication
+- Email Verification
+- Photo Upload
+- Client / Owner / Driver Profile
 
-- name
-- category
-- address
-- coverImage
+### Restaurants
 
-## Edit Restaurant
+- Restaurant CRUD
+- Dish CRUD
+- Realtime Order Notifications(Subscription)
+- Sales Dashboard(Data Visualization) (Victory)
+- Online Payments(Paddle)
 
-- Edit Restaurant
-- Delete Restaurant
+### Nest Concepts
 
-- See Categories
-- See Restaurants by Category (pagination)
-- See Restaurants (pagination)
-- See Restaurant
-- Search Restaurant
-
-- Create Dish
-- Edit Dish
-- Delete Dish
-
-- Orders CRUD
-- Orders Subscription:
-
-  - Pending Orders (Owner) (s: newOrder) (t: CreateOrder(newOrder))
-  - Pending Pickup Order (Delivery) (s: orderUpdate) (t: editOrder(orderUpdate))
-  - Order Status (Customer, Delivery, Owner) (s: orderUpdate) (t: editOrder(orderUpdate))
-
-- Add Driver to Order
-
-- Payments (CRON)
+- Modules
+- Guards
+- Middlewares
+- Decorators

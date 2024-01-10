@@ -1,6 +1,6 @@
 import { Category } from './category.entity';
 import { Field, InputType, ObjectType } from '@nestjs/graphql';
-import { IsString, Length } from 'class-validator';
+import { IsString } from 'class-validator';
 import { CoreEntity } from 'src/common/entities/core.entity';
 import { User } from 'src/users/entities/user.entity';
 import { Column, Entity, ManyToOne, OneToMany, RelationId } from 'typeorm';
@@ -14,7 +14,6 @@ export class Restaurant extends CoreEntity {
   @Field(() => String)
   @Column()
   @IsString()
-  @Length(5)
   name: string;
 
   @Field(() => String)
@@ -31,6 +30,7 @@ export class Restaurant extends CoreEntity {
   @ManyToOne(() => Category, (category) => category.restaurants, {
     nullable: true,
     onDelete: 'SET NULL',
+    eager: true,
   })
   category: Category;
 
@@ -51,7 +51,7 @@ export class Restaurant extends CoreEntity {
 
   @Field(() => Boolean)
   @Column({ default: false })
-  isPromited: boolean;
+  isPromoted: boolean;
 
   @Field(() => Date, { nullable: true })
   @Column({ nullable: true })

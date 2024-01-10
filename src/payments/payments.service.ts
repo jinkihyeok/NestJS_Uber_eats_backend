@@ -40,7 +40,7 @@ export class PaymentService {
           error: 'Yor are not allowed to do this.',
         };
       }
-      restaurant.isPromited = true;
+      restaurant.isPromoted = true;
       const date = new Date();
       date.setDate(date.getDate() + 7);
       restaurant.promotedUntil = date;
@@ -81,10 +81,10 @@ export class PaymentService {
   @Interval(2000)
   async checkPromotedRestaurants() {
     const restaurants = await this.restaurants.find({
-      where: { isPromited: true, promotedUntil: LessThan(new Date()) },
+      where: { isPromoted: true, promotedUntil: LessThan(new Date()) },
     });
     restaurants.forEach(async (restaurant) => {
-      restaurant.isPromited = false;
+      restaurant.isPromoted = false;
       restaurant.promotedUntil = null;
       await this.restaurants.save(restaurant);
     });

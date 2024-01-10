@@ -17,6 +17,8 @@ import { Dish } from './entities/dish.entity';
     CategoryResolver,
     DishResolver,
     RestaurantService,
+    CategoryRepository,
   ],
+  exports: [CategoryRepository],
 })
 export class RestaurantsModule {}
